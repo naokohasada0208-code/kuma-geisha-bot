@@ -29,7 +29,7 @@ def reply(reply_token, text):
         "Content-Type": "application/json",
         "Authorization": f"Bearer {CHANNEL_ACCESS_TOKEN}"
     }
-    body = {B8kSk1g16sdOh2H45fmhbDndoHLobhL885v8SVGa4fDD9tgUNV4cAVHqSuV1O683N/l7YEE5vQUsndV8ulDyZpDZ1SNtV28ugxTj8Ta+O+Tl5+OuhJuQKb98Qn35qtoNv4qf3J8d+aJNHAJc46VaSAdB04t89/1O/w1cDnyilFU=        "replyToken": reply_token,
+    body = {        "replyToken": reply_token,
         "messages": [
             {"type": "text", "text": f"あなたのメッセージ: {text}"}
         ]
