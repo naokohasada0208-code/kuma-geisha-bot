@@ -4,13 +4,13 @@ import os
 
 app = Flask(__name__)
 
-CHANNEL_ACCESS_TOKEN = "ここにLINEのトークン"
+CHANNEL_ACCESS_TOKEN = os.environ.get("CHANNEL_ACCESS_TOKEN")
 
 @app.route("/")
 def home():
     return "Bot is running!"
 
-@app.route("/callback", methods=['POST'])
+@app.route("/callback", methods=["POST"])
 def callback():
     data = request.json
 
