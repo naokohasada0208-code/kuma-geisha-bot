@@ -29,7 +29,8 @@ def reply(reply_token, text):
         "Content-Type": "application/json",
         "Authorization": f"Bearer {CHANNEL_ACCESS_TOKEN}"
     }
-    body = {        "replyToken": reply_token,
+    body = {
+        "replyToken": reply_token,
         "messages": [
             {"type": "text", "text": f"あなたのメッセージ: {text}"}
         ]
